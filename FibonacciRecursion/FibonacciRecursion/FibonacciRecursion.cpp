@@ -25,6 +25,7 @@ int fib_mem(int n)
             F[n - 2] = fib_mem(n - 2);
         if (F[n] == 0)
             F[n - 1] = fib_mem(n - 1);
+        F[n] = F[n - 2] + F[n - 1];
         return F[n - 2] + F[n - 1];
     }
 }
