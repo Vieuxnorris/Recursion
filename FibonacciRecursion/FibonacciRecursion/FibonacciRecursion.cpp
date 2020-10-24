@@ -2,8 +2,10 @@
 //
 
 #include <stdio.h>
+#include <cmath>
+#include <iostream>
 
-int F[10]; // global array pour la mémorisation des valeurs de Fib_mem a changé salon la grandeur de votre nombre, possible d'alloué de la mémoire avec malloc(C), ou new/vector(C++)
+double F[1500]; // global array pour la mémorisation des valeurs de Fib_mem a changé salon la grandeur de votre nombre, possible d'alloué de la mémoire avec malloc(C), ou new/vector(C++)
 
 int fib(int n)
 {
@@ -12,7 +14,7 @@ int fib(int n)
     return fib(n - 2) + fib(n - 1);
 }
 
-int fib_mem(int n)
+double fib_mem(int n)
 {
     if (n <= 1)
     {
@@ -47,7 +49,7 @@ int Ifib(int n)
 
 int main()
 {
-    int n;
-    n = fib_mem(5);
-    printf("%d\n", n);
+    double n = INFINITY;
+    n = fib_mem(1500);
+    std::cout << n;
 }
